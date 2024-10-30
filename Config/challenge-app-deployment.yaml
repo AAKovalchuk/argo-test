@@ -40,7 +40,7 @@ kind: Deployment
 metadata:
   name: challenge-app-deployment
 spec:
-  replicas: 6
+  replicas: 2
   selector:
     matchLabels:
       app: challenge-app
@@ -55,7 +55,7 @@ spec:
     spec:
       containers:
       - name: challenge-app
-        image: 192.168.2.100:5000/challenge-app:1.2
+        image: 192.168.2.100:5000/challenge-app:1.5
         imagePullPolicy: IfNotPresent
         env:
         - name: APP_API_KEY
